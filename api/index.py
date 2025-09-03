@@ -30,7 +30,7 @@ def create_todo_item():
     todo = {
         "id": todos_id_counter,
         "title": title,
-        "complete": False
+        "completed": False
     }
     todos.append(todo)
     todos_id_counter += 1
@@ -47,7 +47,7 @@ def update_todo_items(todo_id):
         if title is not None:
             todo["title"] = title
         if completed is not None:
-            todo["complete"] = completed
+            todo["completed"] = completed
         return todo    
     return {"error": "Todo item not found"}, 404
 
